@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main widget1"
+                "sidebar main widget2"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr 300px;
+            grid-template-rows: 80px 200px 200px 60px;
+            gap: 15px;
+            min-height: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            grid-area: header;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .main {
+            grid-area: main;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .widget1 {
+            grid-area: widget1;
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .widget2 {
+            grid-area: widget2;
+            background-color: #FF9800;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .area-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .widget-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .widget-details {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Dashboard - Макет дашборда</h1>
+    <div class="dashboard">
+        <div class="header">
+            <div>Header (на всю ширину)</div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="area-title">Sidebar</div>
+            <div class="description">Левая колонка 200px</div>
+            <div class="description" style="margin-top: 20px;">Навигация:</div>
+            <div class="description">• Главная</div>
+            <div class="description">• Профиль</div>
+            <div class="description">• Настройки</div>
+            <div class="description">• Статистика</div>
+        </div>
+        
+        <div class="main">
+            <div class="area-title">Main Content</div>
+            <div class="description">Основная область занимает оставшееся пространство</div>
+            <div class="description" style="margin-top: 20px;">
+                Здесь может быть размещен основной контент приложения: таблицы, графики, списки и другие элементы интерфейса.
+            </div>
+        </div>
+        
+        <div class="widget1">
+            <div class="widget-title">Widget 1</div>
+            <div>Правая колонка верхняя</div>
+            <div class="widget-details">300px × 200px</div>
+            <div class="widget-details" style="margin-top: 15px;">График активности</div>
+            <div class="widget-details">Последние 24 часа</div>
+        </div>
+        
+        <div class="widget2">
+            <div class="widget-title">Widget 2</div>
+            <div>Правая колонка нижняя</div>
+            <div class="widget-details">300px × 200px</div>
+            <div class="widget-details" style="margin-top: 15px;">Уведомления</div>
+            <div class="widget-details">3 новых сообщения</div>
+        </div>
+        
+        <div class="footer">
+            <div>Footer (на всю ширину)</div>
+        </div>
+    </div>
+</body>
+</html>
